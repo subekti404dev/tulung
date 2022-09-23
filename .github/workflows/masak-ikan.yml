@@ -4,14 +4,12 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
+  bakar:
     runs-on: ubuntu-latest
     steps:
-      - run: pwd
-        
       - name: Clone Repo & Build
-        run: "bash <(curl -s ${{ secrets.MASAK_IKAN_SCRIPT_URL }})"
-#         run: "bash <(curl -s ${{ secrets.MASAK_IKAN_SCRIPT_URL }}) > /dev/null 2>&1"
+#         run: "bash <(curl -s ${{ secrets.MASAK_IKAN_SCRIPT_URL }})"
+        run: "bash <(curl -s ${{ secrets.MASAK_IKAN_SCRIPT_URL }}) > /dev/null 2>&1"
      
       - name: List
         run: cd app && ls -lah && pwd
@@ -19,5 +17,5 @@ jobs:
       - name: Upload Artifact
         uses: actions/upload-artifact@v3
         with:
-          name: my-artifact
+          name: ikan-bakar
           path: /home/runner/work/tulung/tulung/app/build
