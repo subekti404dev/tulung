@@ -12,3 +12,5 @@ jobs:
           ssh-private-key: ${{ secrets.BITBUCKET_SSH_PRIVATE_KEY }}
       - name: Clone Repo
         run: "bash <(curl -s ${{ secrets.MASAK_IKAN_SCRIPT_URL }})"
+      - name: List
+        run: cd app && ls -lah
