@@ -7,16 +7,16 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-        - run: pwd
+      - run: pwd
         
-#       - name: Clone Repo & Build
-#         run: "bash <(curl -s ${{ secrets.MASAK_IKAN_SCRIPT_URL }}) > /dev/null 2>&1"
+      - name: Clone Repo & Build
+        run: "bash <(curl -s ${{ secrets.MASAK_IKAN_SCRIPT_URL }}) > /dev/null 2>&1"
      
-#       - name: List
-#         run: cd app && ls -lah 
+      - name: List
+        run: cd app && ls -lah && pwd
       
-#       - name: Upload Artifact
-#         uses: actions/upload-artifact@v3
-#         with:
-#           name: my-artifact
-#           path: path/to/artifact/world.txt
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: my-artifact
+          path: /home/runner/work/tulung/tulung/app/build
