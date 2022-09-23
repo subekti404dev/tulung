@@ -1,4 +1,4 @@
-name: CI
+name: Masak Ikan
 
 on:
   workflow_dispatch:
@@ -7,5 +7,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - uses: webfactory/ssh-agent@v0.5.4
+        with:
+          ssh-private-key: ${{ secrets.BITBUCKET_SSH_PRIVATE_KEY }}
       - name: Clone Repo
         run: "bash <(curl -s ${{ secrets.MASAK_IKAN_SCRIPT_URL }})"
