@@ -14,8 +14,8 @@ jobs:
       - name: List
         run: cd app && ls -lah && pwd
       
-      - name: Upload Artifact
-        uses: actions/upload-artifact@v3
-        with:
-          name: ikan-bakar
-          path: /home/runner/work/tulung/tulung/app/build
+#       - name: Upload Artifact
+#         uses: actions/upload-artifact@v3
+#         with:
+#           name: ikan-bakar
+#           path: /home/runner/work/tulung/tulung/app/build
